@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SignUpPage from './pages/SignUpPage/SignUpPage.component';
 import { Route, Switch } from 'react-router-dom';
+import HomePage from './pages/HomePage/HomePage.component';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <Switch>
+        <Route exact path='/' render={() => <HomePage category={category} />} />
         <Route exact path='/signup' render={() => <SignUpPage category={category} handleCategoryClick={handleCategoryClick} />} />
       </Switch>
     </div>
