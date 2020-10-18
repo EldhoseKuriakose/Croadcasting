@@ -38,9 +38,7 @@ const SignUpPage = ({ category, handleCategoryClick }) => {
                     {
                         category === 0
                         ?   <SignUpCategories handleCategoryClick={handleCategoryClick} />
-                        :   category === 1
-                            ?   <SignUp category={category} />
-                            :   <SignUp category={category} />
+                        :   <SignUp />
                     }
                 </div>
             </Container>
